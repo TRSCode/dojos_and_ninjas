@@ -14,7 +14,7 @@
                 <form action="/ninja/create_ninja" method="POST" class="border border-dark rounded p-2">
                     <div>
                         <label for="dojo">Dojo:</label>
-                        <select name="dojo_id" class="mb-3">
+                        <select name="dojo_id" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
                             {% for dojo_list in dojos %}
                             <option value="{{dojo_list.id}}">{{dojo_list.name}}</option>
                             {% endfor %}
@@ -22,15 +22,15 @@
                     </div>
                     <div class="mb-3">
                         <label for="first_name">First Name</label>
-                        <input type="text" placeholder="-- First Name --" name="first_name">
+                        <input type="text" placeholder="-- First Name --" name="first_name" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="last_name">Last Name</label>
-                        <input type="text" placeholder="-- Last Name --" name="last_name">
+                        <input type="text" placeholder="-- Last Name --" name="last_name" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="age">Age</label>
-                        <input type="number" placeholder="-- Age --" name="age">
+                        <input type="number" placeholder="-- Age --" name="age" class="form-control">
                     </div>
                     <input type="submit" value="Create"class="btn btn-primary">
                 </form>
