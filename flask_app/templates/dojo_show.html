@@ -11,30 +11,32 @@
         <div class="container mt-5">
             <div class="container mt-5">
                 <h2>{{dojo.name}}</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Age</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-        
-                    <tbody>
-                        {% for ninja in dojo.ninjas %}
-                        <tr>
-                            <td>{{ ninja.first_name }}</td>
-                            <td>{{ ninja.last_name }}</td>
-                            <td>{{ ninja.age }}</td>
-                            <td>
-                                <a href="#">edit </a>|
-                                <a href="#">delete</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <div class="container border border-dark rounded">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                            {% for ninja in dojo.ninjas %}
+                            <tr>
+                                <td>{{ ninja.first_name }}</td>
+                                <td>{{ ninja.last_name }}</td>
+                                <td>{{ ninja.age }}</td>
+                                <td>
+                                    <a href="#">edit </a>|
+                                    <a href="#">delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
                 <a href="/">Home</a>
             </div>
         </div>

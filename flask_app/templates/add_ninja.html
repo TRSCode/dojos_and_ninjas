@@ -14,7 +14,7 @@
                 <form action="/ninja/create_ninja" method="POST" class="border border-dark rounded p-2">
                     <div>
                         <label for="dojo">Dojo:</label>
-                        <select name="dojo_id">
+                        <select name="dojo_id" class="mb-3">
                             {% for dojo_list in dojos %}
                             <option value="{{dojo_list.id}}">{{dojo_list.name}}</option>
                             {% endfor %}
